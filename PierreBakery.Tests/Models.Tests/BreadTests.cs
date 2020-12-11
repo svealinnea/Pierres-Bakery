@@ -20,5 +20,14 @@ namespace ProjectName.Tests
       int result = newBread.Price;
       Assert.AreEqual(price, result);
     }
+    [TestMethod]
+
+    public void GetBreadType_ReturnBreadType_String()
+    {
+      string type = "ciabatta";
+      Bread newBread = new Bread(type);
+      string result = newBread.BreadType;
+      Assert.AreEqual(type, result);
+    }
   }
 }
