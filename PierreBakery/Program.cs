@@ -27,22 +27,27 @@ namespace PierreBakeryUI
       {
         new Pastry(2);
       } 
-      else 
+      else if (order != "bread" && order != "pastry")
       {
         Console.WriteLine("Please check that you entered Bread or Pastry and try again");
       }
+      else 
+      {
+        Console.WriteLine("We are unsure what you just wrote. Please try again");
+      }
       Console.WriteLine("Thank you for letting us know you would like to purchase" + " " + order + ". " + "How many would you like? [Please enter a number]");
+      Bread yum = new Bread(5);
       int quantity = int.Parse(Console.ReadLine());
       if (quantity == 1 && order == "bread") {
-        Console.WriteLine("Thank you for purchasing with us today, your total is $5");
+        Console.WriteLine("Thank you for purchasing with us today, your total is" + " " + yum.GetPrice());
       } 
       else if (quantity == 2 && order == "bread") 
       {
-        Console.WriteLine("Thank you for purchasing with us today, your total is" {Bread.Price});
+        Console.WriteLine("Thank you for purchasing with us today, your total is" + " " + yum.GetPrice());
       } 
       else if(quantity > 2 && order == "bread") 
       {
-        Console.WriteLine("Thank you for purchasing with us today, your total is" + quantity/2 * 5);
+        Console.WriteLine("Thank you for purchasing with us today, your total is" + quantity/2 * yum.GetPrice());
       }
       else if (quantity == 1 && order == "pastry")
       { 
