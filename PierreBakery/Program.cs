@@ -8,7 +8,7 @@ namespace PierreBakeryUI
   {
     public static void Main() 
     { 
-      Console.WriteLine("Welcome to Pierre's Delcious Delicattesan!");
+      Console.WriteLine("Welcome to Pierre's Delcious Bakery!");
       Console.WriteLine("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
       Console.WriteLine("Please press [Enter] to see todays Bread & Pastry prices!");
       Console.ReadLine();
