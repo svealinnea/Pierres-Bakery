@@ -21,7 +21,7 @@ namespace PierreBakeryUI
       string order = Console.ReadLine().ToLower();
       if (order == "bread") 
       {
-        Console.WriteLine(new Bread(5));
+        new Bread(5);
       } 
       else if (order == "pastry") 
       {
@@ -42,6 +42,10 @@ namespace PierreBakeryUI
       else if(quantity > 2 && order == "bread") 
       {
         Console.WriteLine("Thank you for purchasing with us today, your total is" + quantity/2 * 5);
+      }
+      else if (quantity == 1 && order == "pastry")
+      { 
+        Console.WriteLine("")
       }
       else {
         Console.WriteLine("Please enter a specific quantity and try again");
