@@ -32,22 +32,36 @@ namespace PierreBakeryUI
       }
       Console.WriteLine("Thank you for letting us know you would like to purchase" + " " + order + ". " + "How many would you like? [Please enter a number]");
       int quantity = int.Parse(Console.ReadLine());
-      if (quantity == 1 && order == "bread") {
-        Console.WriteLine("Thank you for purchasing with us today, your total is $5");
-      } 
-      else if (quantity == 2 && order == "bread") 
+      int price = Bread.Price;
+      Console.WriteLine(Bread(price, quantity, order))
+      // if (quantity == 1 && order == "bread") {
+      //   Console.WriteLine("Thank you for purchasing with us today, your total is $5");
+      // } 
+      // else if (quantity == 2 && order == "bread") 
+      // {
+      //   Console.WriteLine("Thank you for purchasing with us today, your total is $5");
+      // } 
+      // else if(quantity > 2 && order == "bread") 
+      // {
+      //   Console.WriteLine("Thank you for purchasing with us today, your total is" + quantity/2 * 5);
+      // }
+      // else if (quantity == 1 && order == "pastry")
+      // { 
+      //   Console.WriteLine("Thank you for purchasing with us today, your total is $2");
+      // }
+      // else if (quantity == 2 && order == "pastry") 
+      // {
+      //   Console.WriteLine("Thank you for purchasing with us today, your total is $4");
+      // }
+      // else if (quantity == 3 && order == "pastry")
+      // {
+      //   Console.WriteLine("Thank you for purchasing with us today, your total is $5");
+      // }
+      // else if (quantity > 3 && order == "pastry")
+      // {
+      //   Console.WriteLine("Thank you for purchasing with us ")
+      // }
       {
-        Console.WriteLine("Thank you for purchasing with us today, your total is $5");
-      } 
-      else if(quantity > 2 && order == "bread") 
-      {
-        Console.WriteLine("Thank you for purchasing with us today, your total is" + quantity/2 * 5);
-      }
-      else if (quantity == 1 && order == "pastry")
-      { 
-        Console.WriteLine("")
-      }
-      else {
         Console.WriteLine("Please enter a specific quantity and try again");
       }
       Console.ReadLine();
