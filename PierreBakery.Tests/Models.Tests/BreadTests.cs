@@ -4,7 +4,7 @@ using PierreBakery.Models;
 namespace ProjectName.Tests
 { 
   [TestClass]
-  public class BreadTests 
+  public class BreadTests
   {
     [TestMethod]
     public void BreadConstructor_CreateAnInstanceOfBread_Bread()
@@ -20,14 +20,15 @@ namespace ProjectName.Tests
       int result = newBread.Price;
       Assert.AreEqual(price, result);
     }
-    [TestMethod]
+    // [TestMethod]
 
-    public void GetBreadType_ReturnBreadType_String()
-    {
-      string type = "ciabatta";
-      Bread newBread = new Bread(type);
-      string result = newBread.BreadType;
-      Assert.AreEqual(type, result);
-    }
+    // public void GetBreadType_ReturnBreadType_String()
+    // {
+    //   string type = "ciabatta";
+    //   int price = 5;
+    //   Bread newBread = new Bread(price, type);
+    //   string result = newBread.Price.BreadType;
+    //   Assert.AreEqual(type, result);
+    // }
   }
 }
