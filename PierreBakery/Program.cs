@@ -30,24 +30,26 @@ namespace PierreBakeryUI
       else if (order != "bread" && order != "pastry")
       {
         Console.WriteLine("Please check that you entered Bread or Pastry and try again");
+        Environment.Exit(0);
       }
       else 
       {
-        Console.WriteLine("We are unsure what you just wrote. Please try again");
+        Environment.Exit(0);
       }
-      Console.WriteLine("Thank you for letting us know you would like to purchase" + " " + order + ". " + "How many would you like? [Please enter a number]");
+      Console.WriteLine("Thank you for letting us know you would like to purchase" + " $" + order + ". " + "How many would you like? [Please enter a number]");
       Bread yum = new Bread(5);
+      Pastry alsoYum = new Pastry(2);
       int quantity = int.Parse(Console.ReadLine());
       if (quantity == 1 && order == "bread") {
-        Console.WriteLine("Thank you for purchasing with us today, your total is" + " " + yum.GetPrice());
+        Console.WriteLine("Thank you for purchasing with us today, your total is" + " $" + yum.GetPrice());
       } 
       else if (quantity == 2 && order == "bread") 
       {
-        Console.WriteLine("Thank you for purchasing with us today, your total is" + " " + yum.GetPrice());
+        Console.WriteLine("Thank you for purchasing with us today, your total is" + " $" + yum.GetPrice());
       } 
       else if(quantity > 2 && order == "bread") 
       {
-        Console.WriteLine("Thank you for purchasing with us today, your total is" + quantity/2 * yum.GetPrice());
+        Console.WriteLine("Thank you for purchasing with us today, your total is" + " " + quantity/2 * yum.GetPrice());
       }
       else if (quantity == 1 && order == "pastry")
       { 

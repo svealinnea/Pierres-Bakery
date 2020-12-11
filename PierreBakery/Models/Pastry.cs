@@ -4,11 +4,15 @@ namespace PierreBakery.Models
 {
   public class Pastry
   {
-    public int Price { get; set; }
+    private int _price { get; set; }
 
     public Pastry(int price)
     {
-      Price = price;
+      _price = price;
+    }
+    public int GetPrice()
+    {
+      return _price;
     }
   }
 }
