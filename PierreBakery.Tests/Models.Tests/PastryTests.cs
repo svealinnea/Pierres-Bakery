@@ -17,7 +17,7 @@ namespace PierreBakery.Tests
     {
       int price = 2;
       Pastry newPastry = new Pastry(price);
-      int result = newPastry.Price;
+      int result = newPastry.GetPrice();
       Assert.AreEqual(price, result);
     }
   }
