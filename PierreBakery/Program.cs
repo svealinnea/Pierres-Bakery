@@ -13,10 +13,13 @@ namespace PierreBakeryUI
       Console.WriteLine("Please press [Enter] to see todays Bread & Pastry prices!");
       Console.ReadLine();
       Console.WriteLine("The price for a loaf of Bread is $5 and the Price for Pastries is $2");
+      Console.WriteLine("Press [Enter] to see Todays Specials!");
+      Console.ReadLine();
       Console.WriteLine("Todays Specials Include:");
       Console.WriteLine("*-*-*-*-*-*-*-*-*-*-*-*-*");
       Console.WriteLine("Bread: Buy 2, get 1 free.");
       Console.WriteLine("Pastry: Buy 1 for $2 or 3 for $5");
+      Console.ReadLine();
       Console.WriteLine("TODAY ONLY --- Multiple Order Type Special!");
       Console.WriteLine("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_");
       Console.WriteLine("If you purchase both a pastry and a loaf of bread you will get the pastry for $1 and the loaf for $3, NO matter how many you buy!");
@@ -24,13 +27,15 @@ namespace PierreBakeryUI
       string order = Console.ReadLine().ToLower();
       if (order == "both") 
       {
-        new Bread(3);
-        new Pastry(1);
+        Bread yummy = new Bread(3);
+        Pastry yummylicious = new Pastry(1);
         Console.WriteLine("How many loafs of bread would you like?");
         int breadQuantity = int.Parse(Console.ReadLine());
         Console.WriteLine("How many pastries would you like?");
         int pastryQuantity = int.Parse(Console.ReadLine());
-        Console.WriteLine("Thank you for purchasing with us today, your total is");
+        int total = yummy.GetPrice() * breadQuantity + yummylicious.GetPrice() * pastryQuantity;
+        Console.WriteLine("Thank you for purchasing with us today, your total is" + " $" + total);
+        Environment.Exit(0);
       } 
       else if (order == "pastry") 
       {
