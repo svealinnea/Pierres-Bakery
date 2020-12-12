@@ -20,15 +20,5 @@ namespace PierreBakery.Tests
       int result = newBread.GetPrice();
       Assert.AreEqual(price, result);
     }
-    // [TestMethod]
-
-    // public void GetBreadType_ReturnBreadType_String()
-    // {
-    //   string type = "ciabatta";
-    //   int price = 5;
-    //   Bread newBread = new Bread(price, type);
-    //   string result = newBread.Price.BreadType;
-    //   Assert.AreEqual(type, result);
-    // }
   }
 }
