@@ -17,7 +17,7 @@ namespace PierreBakery.Tests
     {
       int price = 5;
       int quantity = 6;
-      int total = 10;
+      int total = 30;
       Bread newBread = new Bread(price, quantity);
       int result = newBread.GetPrice();
       Assert.AreEqual(total, result);
