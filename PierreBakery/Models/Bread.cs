@@ -1,19 +1,25 @@
 // using System;
-// using PierreBakeryUI;
+using PierreBakeryUI;
 
 namespace PierreBakery.Models
 {
   public class Bread
   {
-    private int _price { get; set;}
+    public int Price { get; set;}
+    public int Quantity { get; set; }
 
-    public Bread(int price)
+    public Bread(int price, int quantity)
     {
-      _price = price;
+      Price = price;
+      Quantity = quantity;
     }
     public int GetPrice() 
     {
-      return _price;
+      return Price * Quantity;
+    }
+    public int GetDiscount()
+    {
+      return Price * Quantity / 2;
     }
   }
 }
