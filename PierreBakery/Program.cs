@@ -40,7 +40,6 @@ namespace PierreBakeryUI
       // }
       Console.WriteLine("Thank you for letting us know you would like to purchase" + " " + order + "How many would you like to purchase?");
       int quantity = int.Parse(Console.ReadLine());
-      Pastry alsoYum = new Pastry(2);
       if (quantity == 1 && order == "bread") {
         Bread newBread = new Bread(5, 1);
         Console.WriteLine("Thank you for purchasing with us today, your total is" + " $" + newBread.GetPrice());
@@ -49,27 +48,27 @@ namespace PierreBakeryUI
       {
         Console.WriteLine("Thank you for purchasing with us today, your total is $5");
       } 
-      else if(quantity > 2 && order == "bread") 
+      else if(quantity >= 3 && order == "bread") 
       {
         Bread newBread = new Bread(5, quantity);
         Console.WriteLine("Thank you for purchasing with us today, your total is" + " $" + newBread.GetDiscount());
       }
-      else if (quantity == 1 && order == "pastry")
-      { 
-        Console.WriteLine("Thank you for purchasing with us today, your total is" + " $" + alsoYum.GetPrice());
-      }
-      else if (quantity == 2 && order == "pastry") 
-      {
-        Console.WriteLine("Thank you for purchasing with us today, your total is" + " $" + alsoYum.GetPrice() * 2);
-      }
-      else if (quantity == 3 && order == "pastry")
-      {
-        Console.WriteLine("Thank you for purchasing with us today, your total is $5");
-      }
-      else if (quantity > 3 && order == "pastry")
-      {
-        Console.WriteLine("Thank you for purchasing with us today, your total is" + " $" + quantity/3 * 5);
-      } 
+      // else if (quantity == 1 && order == "pastry")
+      // { 
+      //   Console.WriteLine("Thank you for purchasing with us today, your total is" + " $" + alsoYum.GetPrice());
+      // }
+      // else if (quantity == 2 && order == "pastry") 
+      // {
+      //   Console.WriteLine("Thank you for purchasing with us today, your total is" + " $" + alsoYum.GetPrice() * 2);
+      // }
+      // else if (quantity == 3 && order == "pastry")
+      // {
+      //   Console.WriteLine("Thank you for purchasing with us today, your total is $5");
+      // }
+      // else if (quantity > 3 && order == "pastry")
+      // {
+      //   Console.WriteLine("Thank you for purchasing with us today, your total is" + " $" + quantity/3 * 5);
+      // } 
       else 
       {
         Console.WriteLine("Please enter a specific quantity and try again");
