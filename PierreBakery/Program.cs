@@ -1,6 +1,5 @@
 using System;
 using PierreBakery.Models;
-//using System.Collections.Generic; -- use for lists
 
 namespace PierreBakeryUI
 {
@@ -21,24 +20,7 @@ namespace PierreBakeryUI
       Console.WriteLine("Pastry: Buy 1 for $2 or 3 for $5");
       Console.WriteLine("What would you like to order? Please enter [Bread] or [Pastry]");
       string order = Console.ReadLine().ToLower();
-      // if (order == "pastry") 
-      // {
-      //   new Pastry(2);
-      // } 
-      // else if (order == "bread")
-      // {
-      //   new Bread(5, 6);
-      // }
-      // else if (order != "bread" && order != "pastry" && order != "both")
-      // {
-      //   Console.WriteLine("Please check that you entered Bread or Pastry or Both and try again");
-      //   Environment.Exit(0);
-      // }
-      // else 
-      // {
-      //   Environment.Exit(0);
-      // }
-      Console.WriteLine("Thank you for letting us know you would like to purchase" + " " + order + "How many would you like to purchase?");
+      Console.WriteLine("Thank you for letting us know you would like to purchase" + " " + order + " How many would you like to purchase?");
       int quantity = int.Parse(Console.ReadLine());
       if (quantity == 1 && order == "bread") {
         Bread newBread = new Bread(5, 1);
@@ -53,22 +35,25 @@ namespace PierreBakeryUI
         Bread newBread = new Bread(5, quantity);
         Console.WriteLine("Thank you for purchasing with us today, your total is" + " $" + newBread.GetDiscount());
       }
-      // else if (quantity == 1 && order == "pastry")
-      // { 
-      //   Console.WriteLine("Thank you for purchasing with us today, your total is" + " $" + alsoYum.GetPrice());
-      // }
-      // else if (quantity == 2 && order == "pastry") 
-      // {
-      //   Console.WriteLine("Thank you for purchasing with us today, your total is" + " $" + alsoYum.GetPrice() * 2);
-      // }
-      // else if (quantity == 3 && order == "pastry")
-      // {
-      //   Console.WriteLine("Thank you for purchasing with us today, your total is $5");
-      // }
-      // else if (quantity > 3 && order == "pastry")
-      // {
-      //   Console.WriteLine("Thank you for purchasing with us today, your total is" + " $" + quantity/3 * 5);
-      // } 
+      else if (quantity == 1 && order == "pastry")
+      { 
+        Pastry newPastry = new Pastry(2, 1);
+        Console.WriteLine("Thank you for purchasing with us today, your total is" + " $" + newPastry.GetPrice());
+      }
+      else if (quantity == 2 && order == "pastry") 
+      {
+        Pastry newPastry = new Pastry(2, 2);
+        Console.WriteLine("Thank you for purchasing with us today, your total is" + " $" + newPastry.GetPrice());
+      }
+      else if (quantity == 3 && order == "pastry")
+      {
+        Console.WriteLine("Thank you for purchasing with us today, your total is $5");
+      }
+      else if (quantity > 3 && order == "pastry")
+      {
+        Pastry newPastry = new Pastry(2, quantity);
+        Console.WriteLine("Thank you for purchasing with us today, your total is" + " $" + newPastry.GetDiscount());
+      } 
       else 
       {
         Console.WriteLine("Please enter a specific quantity and try again");
