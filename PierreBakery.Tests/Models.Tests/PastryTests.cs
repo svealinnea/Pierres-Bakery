@@ -20,12 +20,13 @@ namespace PierreBakery.Tests
       int price = newPastry.GetPrice();
       Assert.AreEqual(price, result);
     }
+    [TestMethod]
     public void GetPastryDiscount_ReturnPrice_Int()
     {
       Pastry newPastry = new Pastry(2,10);
       int discount = newPastry.GetDiscount();
-      int result = 12;
-      Assert.AreEqual(discount, result);
+      int result = 16;
+      Assert.AreEqual(result, discount);
     }
   }
 }
