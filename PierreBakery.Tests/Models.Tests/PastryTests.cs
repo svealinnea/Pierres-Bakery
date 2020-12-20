@@ -15,8 +15,8 @@ namespace PierreBakery.Tests
     [TestMethod]
     public void GetPastryPrice_ReturnPrice_Int()
     {
-      Pastry newPastry = new Pastry(2, 6);
-      int result = 4;
+      Pastry newPastry = new Pastry(2, 1);
+      int result = 2;
       int price = newPastry.GetPrice();
       Assert.AreEqual(price, result);
     }
