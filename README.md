@@ -1,6 +1,6 @@
 # _Pierre's Bakery_
 
-### _C# Console Application for a bakery, 12-11-2020_
+### _C# Console Application for a bakery, 12-27-2020_
 
 ### By Svea Wade 
 
