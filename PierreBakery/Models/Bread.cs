@@ -19,7 +19,9 @@ namespace PierreBakery.Models
     }
     public int GetDiscount()
     {
-      return Price * Quantity / 2;
+      int freeAmount = Quantity/3;
+      int total = Quantity - freeAmount; 
+      return Price * total;
     }
   }
 }
