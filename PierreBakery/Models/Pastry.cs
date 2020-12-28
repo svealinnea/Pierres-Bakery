@@ -18,7 +18,9 @@ namespace PierreBakery.Models
     }
     public int GetDiscount()
     {
-      return 5 * Quantity / 3;
+      int freePastries = Quantity/3;
+
+      return (Quantity * 2) - freePastries;
     }
   }
 }
