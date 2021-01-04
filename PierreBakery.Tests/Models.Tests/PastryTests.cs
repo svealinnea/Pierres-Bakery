@@ -25,7 +25,7 @@ namespace PierreBakery.Tests
     {
       Pastry newPastry = new Pastry(2,10);
       int discount = newPastry.GetDiscount();
-      int result = 16;
+      int result = 17;
       Assert.AreEqual(result, discount);
     }
   }
